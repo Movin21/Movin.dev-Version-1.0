@@ -1,6 +1,7 @@
 import { cn } from "@/utils/cn";
 import { FaMedium } from "react-icons/fa6";
 import React from "react";
+import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import {
   IconArrowWaveRightUp,
@@ -14,12 +15,12 @@ import {
 import { FaIcons } from "react-icons/fa6";
 import { Meteors } from "./ui/meteors";
 import { BackgroundBeams } from "./ui/background-beams";
+import { FollowerPointerCard } from "./ui/following-pointer";
 const Blogs = () => {
   return (
     <div className="md:w-max h-full lg:w-full rounded-md relative flex flex-col items-center justify-center ">
-      <BackgroundBeams />
-
       <div className="mt-36">
+        <BackgroundBeams />
         <h1 className="pb-32 heading text-3xl sm:text-4xl lg:text-5xl text-center font-bold">
           Featured&nbsp;
           <span className="text-cyan-500 inline-flex items-center">
@@ -27,19 +28,23 @@ const Blogs = () => {
             <FaMedium className="ml-2" />
           </span>
         </h1>
-        <div className="relative">
-          <BentoGrid className="max-w-4xl mx-auto">
-            {items.map((item, i) => (
-              <BentoGridItem
-                key={i}
-                title={item.title}
-                description={item.description}
-                header={item.header}
-                icon={item.icon}
-                className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-              />
-            ))}
-          </BentoGrid>
+        <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-gradient-to-r from-cyan-500 to-blue-500 hover:shadow-xl border border-zinc-100">
+          <div className="w-80 mx-auto">
+            <div className=" p-4">
+              <h2 className="font-bold my-4 text-lg text-black">
+                {blogContent.title}
+              </h2>
+              <h2 className="font-normal my-4 text-sm text-white">
+                {blogContent.description}
+              </h2>
+              <div className="flex flex-row justify-between items-center mt-10">
+                <span className="text-sm text-white">{blogContent.date}</span>
+                <div className="relative z-10 px-6 py-2 bg-black text-white font-bold rounded-xl block text-xs">
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -47,51 +52,14 @@ const Blogs = () => {
 };
 
 export default Blogs;
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-);
-const items = [
-  {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Power of Communication",
-    description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
-    header: <Skeleton />,
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-  },
-];
+
+const blogContent = {
+  slug: "amazing-tailwindcss-grid-layouts",
+  author: "Manu Arora",
+  date: "28th March, 2023",
+  title: "Amazing Tailwindcss Grid Layout Examples",
+  description:
+    "Grids are cool, but Tailwindcss grids are cooler. In this article, we will learn how to create amazing Grid layouts with Tailwindcs grid and React.",
+
+  authorAvatar: "/manu.png",
+};
