@@ -8,7 +8,7 @@ import { FaGithubSquare } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="h-[45rem] md:w-max lg:w-full rounded-md relative flex flex-col items-center justify-center ">
+    <div className="min-h-[45rem] md:w-max lg:w-full rounded-md relative flex flex-col items-center justify-center">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -47,18 +47,21 @@ const Hero = () => {
         </div>
       </div>
       <div className="sm:pt-96 lg:pt-0">
-        <div className="flex space-x-4">
-          <a href="#linkedin">
+        <div className="flex space-x-4 mt-12 relative z-10">
+          <a
+            href="https://www.linkedin.com/in/movindu-liyanage-291b48282/"
+            target="_blank"
+          >
             <FaLinkedin className="relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none" />
           </a>
-          <a href="#about">
+          <a href="./bg.png" download="Resumé_Movindu Liyanage">
             <DownloadButton
               title="Download Resumé"
               icon={<FaDownload />}
               position="right"
             />
           </a>
-          <a href="#linkedin">
+          <a href="https://github.com/Movin21" target="_blank">
             <FaGithubSquare className="relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none" />
           </a>
         </div>

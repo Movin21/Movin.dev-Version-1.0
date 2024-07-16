@@ -1,27 +1,11 @@
-import { FaMedium } from "react-icons/fa6";
 import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
-import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconBrandLinkedin,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
+import { IconBrandLinkedin } from "@tabler/icons-react";
 import { MdMarkEmailRead } from "react-icons/md";
-import { Meteors } from "./ui/meteors";
 import { BackgroundBeams } from "./ui/background-beams";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { cn } from "@/utils/cn";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
+import { IconBrandGithub } from "@tabler/icons-react";
 const Contact = () => {
   return (
     <div className="md:w-max h-full lg:w-full rounded-md relative flex flex-col items-center justify-center ">
@@ -79,7 +63,7 @@ const Contact = () => {
                 className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
                 type="submit"
               >
-                <IconBrandGithub className=" h-4 w-4  dark:text-neutral-300" />
+                <IconBrandGithub className=" h-4 w-4 dark:text-cyan-500" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   GitHub
                 </span>
