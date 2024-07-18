@@ -33,10 +33,10 @@ const Hero = () => {
         <div>
           <TextGenerateEffect
             words="Hi! I'm Movindu Liyanage,a"
-            className="text-center sm:text-xl md:text-5xl lg:text-6xl "
+            className="text-center text-xl md:text-5xl lg:text-6xl "
           />
           <FlipWords
-            className="text-center text-[28px] md:text-4xl lg:text-7xl "
+            className="text-center text-3xl md:text-4xl lg:text-7xl "
             words={["<Student_Devoloper/>", "Tech_Enthusiast"]}
           ></FlipWords>
         </div>
@@ -47,7 +47,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="sm:pt-96 lg:pt-0">
-        <div className="flex space-x-4 mt-12 relative z-10">
+        <div className="flex space-x-4 lg:mt-15 sm: mt-24 relative z-10">
           <a
             href="https://www.linkedin.com/in/movindu-liyanage-291b48282/"
             target="_blank"

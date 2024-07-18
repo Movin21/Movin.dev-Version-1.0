@@ -21,22 +21,15 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
+      let direction = current - scrollYProgress.getPrevious()!;
       if (scrollYProgress.get() < 0) {
         setVisible(false);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(direction < 0);
       }
     }
   });
@@ -56,26 +49,42 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4 ",
+          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-4 py-2 items-center justify-center space-x-4",
           className
         )}
       >
-        <div className="lg:text-2xl sm:text-xl font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white pr-20 pl-0 py-0 rounded-full">
-          <span className="text-cyan-500 sm:text-xl">@movin.dev</span>
+        <div className="text-lg sm:text-xl lg:text-2xl font-medium relative text-black dark:text-white sm: pr-10 lg:pr-20">
+          <span className="text-cyan-500">@movin.dev</span>
         </div>
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
-            <span className="absolute inset-x-0 w-full mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
-          </Link>
-        ))}
+        <div className="hidden sm:flex space-x-4">
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`link-${idx}`}
+              href={navItem.link}
+              className={cn(
+                "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              )}
+            >
+              <div className="relative flex flex-col items-center">
+                <span className="text-sm lg:text-base">{navItem.name}</span>
+                <div className="absolute w-full bottom-[-4px] h-[2px]">
+                  <div className="h-full bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="flex sm:hidden space-x-6">
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`icon-link-${idx}`}
+              href={navItem.link}
+              className="text-neutral-600 dark:text-neutral-50"
+            >
+              {navItem.icon}
+            </Link>
+          ))}
+        </div>
       </motion.div>
     </AnimatePresence>
   );

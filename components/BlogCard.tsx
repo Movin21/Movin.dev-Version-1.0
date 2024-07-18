@@ -14,8 +14,8 @@ const BlogCard = ({
   href: string;
 }) => {
   return (
-    <div className="relative overflow-hidden w-80 h-[28rem] rounded-2xl transition duration-200 group bg-black hover:shadow-xl border border-cyan-500 ">
-      <div className="w-full h-48 bg-gray-500 rounded-tr-lg rounded-tl-lg overflow-hidden relative">
+    <div className="relative overflow-hidden w-80 h-[28rem] rounded-2xl transition duration-200 group bg-black hover:shadow-xl border border-cyan-500 m-4">
+      <div className="w-full h-48 bg-black-500 rounded-tr-lg rounded-tl-lg overflow-hidden relative">
         <Image
           src={image}
           alt={title}
@@ -38,7 +38,8 @@ const BlogCard = ({
 
           <a
             href={href}
-            className="relative z-10 px-4 py-2 bg-cyan-500 text-white font-bold rounded-xl block text-xs"
+            target="_blank"
+            className="relative z-10 px-4 py-2 bg-cyan-500 text-white font-bold rounded-xl block text-xs transition duration-300 ease-in-out hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-800 hover:shadow-lg"
           >
             Read More
           </a>

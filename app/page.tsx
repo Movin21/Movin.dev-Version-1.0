@@ -3,6 +3,9 @@ import Projects from "@/components/Projects";
 import Blogs from "@/components/Blogs";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FaHome } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa";
+import { BsMedium } from "react-icons/bs";
+import { MdMarkEmailRead } from "react-icons/md";
 import Contact from "@/components/Contact";
 import Footer from "@/components/footer";
 
@@ -13,9 +16,9 @@ export default function Home() {
         <FloatingNav
           navItems={[
             { name: "Home", link: "/", icon: <FaHome /> },
-            { name: "Projects", link: "/", icon: <FaHome /> },
-            { name: "Blogs", link: "/", icon: <FaHome /> },
-            { name: "Contact Me", link: "/", icon: <FaHome /> },
+            { name: "Projects", link: "/", icon: <FaLaptopCode /> },
+            { name: "Blogs", link: "/", icon: <BsMedium /> },
+            { name: "Contact Me", link: "/", icon: <MdMarkEmailRead /> },
           ]}
         />
         <Hero />
