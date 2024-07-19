@@ -6,7 +6,10 @@ import BlogCard from "./BlogCard";
 
 const Blogs = () => {
   return (
-    <div className="w-full h-full rounded-md relative flex flex-col items-center justify-center px-4 md:px-8 lg:px-16">
+    <div
+      id="Blogs"
+      className="w-full h-full rounded-md relative flex flex-col items-center justify-center px-4 md:px-8 lg:px-16"
+    >
       <div className="mt-36 w-full max-w-7xl">
         <BackgroundBeams />
         <h1 className="pb-32 heading text-3xl sm:text-4xl lg:text-5xl text-center font-bold">

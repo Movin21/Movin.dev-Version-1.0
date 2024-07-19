@@ -8,7 +8,10 @@ import { BackgroundBeams } from "./ui/background-beams";
 
 const RecentProjects = () => {
   return (
-    <div className="md:w-max h-full lg:w-full rounded-md relative flex flex-col items-center justify-center ">
+    <div
+      id="Projects"
+      className="md:w-max h-full lg:w-full rounded-md relative flex flex-col items-center justify-center "
+    >
       <BackgroundBeams />
       <div className="mt-30">
         <h1 className="heading text-3xl sm:text-4xl lg:text-5xl text-center font-bold">

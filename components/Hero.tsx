@@ -8,7 +8,10 @@ import { FaGithubSquare } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="min-h-[45rem] md:w-max lg:w-full rounded-md relative flex flex-col items-center justify-center">
+    <div
+      id="Hero"
+      className="min-h-[45rem] bg-black-500 md:w-max lg:w-full rounded-md relative flex flex-col items-center justify-center"
+    >
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -54,7 +57,10 @@ const Hero = () => {
           >
             <FaLinkedin className="relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none" />
           </a>
-          <a href="./bg.png" download="Resumé_Movindu Liyanage">
+          <a
+            href="./Movindu Liyanage Resume.pdf"
+            download="Resumé_Movindu Liyanage"
+          >
             <DownloadButton
               title="Download Resumé"
               icon={<FaDownload />}

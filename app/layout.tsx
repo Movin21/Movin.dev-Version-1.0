@@ -23,6 +23,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <script
+            type="module"
+            defer
+            src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/spiral.js"
+          ></script>
           {children}
         </ThemeProvider>
       </body>

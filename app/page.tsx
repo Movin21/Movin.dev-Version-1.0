@@ -8,6 +8,7 @@ import { BsMedium } from "react-icons/bs";
 import { MdMarkEmailRead } from "react-icons/md";
 import Contact from "@/components/Contact";
 import Footer from "@/components/footer";
+import Loading from "./loading";
 
 export default function Home() {
   return (
@@ -15,10 +16,10 @@ export default function Home() {
       <div className="max-w-8xl w-full mx-auto ">
         <FloatingNav
           navItems={[
-            { name: "Home", link: "/", icon: <FaHome /> },
-            { name: "Projects", link: "/", icon: <FaLaptopCode /> },
-            { name: "Blogs", link: "/", icon: <BsMedium /> },
-            { name: "Contact Me", link: "/", icon: <MdMarkEmailRead /> },
+            { name: "Home", link: "#Hero", icon: <FaHome /> },
+            { name: "Projects", link: "#Projects", icon: <FaLaptopCode /> },
+            { name: "Blogs", link: "#Blogs", icon: <BsMedium /> },
+            { name: "Contact Me", link: "#Contact", icon: <MdMarkEmailRead /> },
           ]}
         />
         <Hero />
