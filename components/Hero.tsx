@@ -39,7 +39,7 @@ const Hero = () => {
             className="text-center text-xl md:text-5xl lg:text-6xl "
           />
           <FlipWords
-            className="text-center text-3xl md:text-4xl lg:text-7xl "
+            className="text-center text-3xl md:text-4xl lg:text-7xl sm:mx-auto"
             words={["<Student_Devoloper/>", "Tech_Enthusiast"]}
           ></FlipWords>
         </div>
