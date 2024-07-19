@@ -1,7 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { socialMedia } from "@/data";
-
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
