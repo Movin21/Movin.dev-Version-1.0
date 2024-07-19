@@ -24,7 +24,7 @@ export const projects = [
     id: 2,
     title: "HirelyAI- Job Applicant Management System",
     des: "This is an job applicant management system designed to streamline the hiring process for both applicants and employers. The system incorporates advanced functionalities to enhance user experience and efficiency in the hiring process.",
-    img: "HirelyAi.svg",
+    img: "Hirelyai.svg",
     iconLists: [
       "re.svg",
       "tail.svg",
