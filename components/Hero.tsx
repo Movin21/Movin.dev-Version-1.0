@@ -34,9 +34,6 @@ const Hero = () => {
           </p>
         </div>
         <div>
-          <h1 className="text-center text-xl md:text-5xl lg:text-6xl ">
-            Hi! I'm Movindu Liyanage,a
-          </h1>
           <FlipWords
             className="text-center text-3xl md:text-4xl lg:text-7xl "
             words={["<Student_Devoloper/>", "Tech_Enthusiast"]}
