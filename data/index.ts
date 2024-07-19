@@ -59,7 +59,7 @@ export const projects = [
     img: "movindev.svg",
     iconLists: ["next.svg", "re.svg", "tail.svg", "ts.svg", "fm.svg"],
     linkTitle: "www.movin.dev",
-    link: "www.movin.dev",
+    link: "https://movin.dev/",
     github: false,
   },
 ];
