@@ -38,10 +38,12 @@ const Hero = () => {
             words="Hi! I'm Movindu Liyanage,a"
             className="text-center text-xl md:text-5xl lg:text-6xl "
           />
+          <div className="flex justify-center">
           <FlipWords
             className="text-center text-3xl md:text-4xl lg:text-7xl sm:mx-auto"
             words={["<Student_Devoloper/>", "Tech_Enthusiast"]}
           ></FlipWords>
+            </div>
         </div>
         <div>
           <p className="text-center md:tracking-wider mt-2 mb-4 text-sm">
