@@ -97,31 +97,31 @@ const Contact = () => {
           <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
           <div className="flex space-x-4">
-  
-    href="https://github.com/Movin21"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-  >
-    <IconBrandGithub className="h-4 w-4 dark:text-cyan-500" />
-    <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-      GitHub
-    </span>
-    <BottomGradient />
-  </a>
-  
-    href="https://www.linkedin.com/in/movindu-liyanage-291b48282/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-  >
-    <IconBrandLinkedin className="h-4 w-4 dark:text-cyan-500" />
-    <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-      LinkedIn
-    </span>
-    <BottomGradient />
-  </a>
-</div>
+            <a
+              href="https://github.com/Movin21"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+            >
+              <IconBrandGithub className="h-4 w-4 dark:text-cyan-500" />
+              <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+                GitHub
+              </span>
+              <BottomGradient />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/movindu-liyanage-291b48282/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+            >
+              <IconBrandLinkedin className="h-4 w-4 dark:text-cyan-500" />
+              <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+                LinkedIn
+              </span>
+              <BottomGradient />
+            </a>
+          </div>
         </div>
       </div>
     </div>
