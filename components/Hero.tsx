@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="flex justify-center">
           <FlipWords
             className="text-center text-3xl md:text-4xl lg:text-7xl sm:mx-auto"
-            words={["<Student_Devoloper/>", "Tech_Enthusiast"]}
+            words={["<Full_Stack_Dev/>", "Devops_Enthusiast"]}
           ></FlipWords>
             </div>
         </div>
